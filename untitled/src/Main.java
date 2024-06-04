@@ -4,7 +4,7 @@ public class Main {
     public Scanner scanner = new Scanner(System.in);
     int userSelection;
 
-    public int Patient(){
+    public int PatientMenu(){
         while(true){
             System.out.println("""
                             
@@ -67,12 +67,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main m = new Main();
-        int authortiy = m.MainMenu();
-        if (authortiy == 1){
-            m.HospitalAdministrator();
-        } else if (authortiy == 2) {
-            m.Patient();
-        }
+//        Main m = new Main();
+//        int authority = m.MainMenu();
+//        if (authority == 1){
+//            m.HospitalAdministrator();
+//        } else if (authority == 2) {
+//            m.PatientMenu();
+//        }
+
+        Doctor suraj = new Doctor("Suraj", "0001", "24/04/2003", "Nero-physician");
+        System.out.printf("""
+                Doctors name is: %s
+                Doctors ID is: %s
+                Doctors birthday is: %s
+                """, suraj.doctorName, suraj.doctorId, suraj.birthday);
+        System.out.println("Suraj is a physician: " + suraj.isPhysician(suraj.specialization));
+
     }
 }
