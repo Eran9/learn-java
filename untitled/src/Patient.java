@@ -1,10 +1,10 @@
 public class Patient {
     public String name;
     public String birthday;
-    public int contact;
+    public long contact;
     public String patientId;
 
-    public Patient(String patientName, String birthday,String patientID, int contactNumber){
+    public Patient(String patientName, String birthday,String patientID, long contactNumber){
         this.name = patientName;
         this.birthday = birthday;
         this.patientId = patientID;

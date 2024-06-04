@@ -75,13 +75,20 @@ public class Main {
 //            m.PatientMenu();
 //        }
 
-        Doctor suraj = new Doctor("Suraj", "0001", "24/04/2003", "Nero-physician");
+        Doctor chopper = new Doctor("chopper", "0001", "24/04/2003", "Nero-physician");
         System.out.printf("""
                 Doctors name is: %s
                 Doctors ID is: %s
                 Doctors birthday is: %s
-                """, suraj.doctorName, suraj.doctorId, suraj.birthday);
-        System.out.println("Suraj is a physician: " + suraj.isPhysician(suraj.specialization));
-
+                """, chopper.doctorName, chopper.doctorId, chopper.birthday);
+        System.out.println("Suraj is a physician: " + chopper.isPhysician(chopper.specialization));
+        System.out.println("=======================================================================================================");
+        Patient luffy = new Patient("Luffy", "05/05/1999", "D-0001", +94776283813L);
+        System.out.printf("""
+                Patient's name is: %s
+                Patient's ID is: %s
+                Patient's birthday is: %s
+                """, luffy.name, luffy.patientId, luffy.birthday);
+        System.out.println("Patient's category is: " + luffy.getPatientType(luffy.patientId));
     }
 }
