@@ -12,7 +12,7 @@ public class Doctor {
     }
 
 
-    public boolean isPhysician(String specialization){
-        return specialization.contains("Physician") || specialization.contains("physician");
+    public boolean isPhysician(){
+        return this.specialization.endsWith("Physician") || this.specialization.endsWith("physician");
     }
 }
